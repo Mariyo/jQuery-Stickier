@@ -2,7 +2,10 @@
 
 	$.fn.stickier = function() {
 		
-		var $el = $(this); 
+		var $el = $(this);
+		
+		if(typeof $el == 'undefined')
+			return false;
 	
 		function sticky() {
 			var $stickier = $('#stickier-fixed');
@@ -21,7 +24,8 @@
 					.css('width', $el.width())
 					.css('height', $el.height());
 				$el.clone().appendTo($stickier);
-			}	
+				$el.css('visibility', 'hidden');
+			}
 			
 		}
 	
@@ -30,6 +34,8 @@
 			
 			if($stickier.length)
 				$stickier.remove();
+			
+			$el.css('visibility', 'visible');
 		}
 	
 		function isScrolledIntoView(elem) {
@@ -37,7 +43,7 @@
 			var docViewBottom = docViewTop + $(window).height();
 			var elemTop = elem.offset().top;
 			var elemBottom = elemTop + elem.height();
-			var $visible = ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+			var $visible = (elemTop >= docViewTop);
 			
 			if($visible)
 				unSticky();
