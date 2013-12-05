@@ -7,13 +7,13 @@ Stickier - jQuery plugin to stick! or stuck! selected element not visible after 
 
 <pre>
 
-		<!-- Stickier initializing -->
-		<script>
+		&lt;!-- Stickier initializing --&gt;
+		&lt;script&gt;
 			$(document).ready(function(){
 				
 				$('.sticky').stickier();
   
 			});
-		</script>
+		&lt;/script&gt;
 
 </pre>
