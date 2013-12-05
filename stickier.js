@@ -18,8 +18,8 @@
 					.css('z-index', '9999')
 					.css('top', '0')
 					.css('display', $el.css('display'))
-					.css('width', $parent.width())
-					.css('height', $parent.width());
+					.css('width', $el.width())
+					.css('height', $el.height());
 				$el.clone().appendTo($stickier);
 			}	
 			
