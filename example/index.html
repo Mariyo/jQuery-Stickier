@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	
+		<!-- Do not forget jQuery -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<!-- Include Stickier -->
+		<script  type="text/javascript" src="../stickier.js"></script>
+		
+		<!-- Stickier initializing -->
 		<script>
 			$(document).ready(function(){
-				$("button").click(function(){
-					$("p").hide();
-				});
-  
+				
 				$('.sticky').stickier();
   
 			});
 		</script>
-
-		<!-- Include Stickier first! -->
-		<script  type="text/javascript" src="../stickier.js"></script>
 
 		<!-- Some CSS of your content -->
 		<style type="text/css" media="all">
