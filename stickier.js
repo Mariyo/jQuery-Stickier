@@ -1,5 +1,5 @@
 (function ( $ ) {
- 
+
 	$.fn.stickier = function() {
 		
 		var $el = $(this); 
@@ -13,7 +13,13 @@
 				
 				$parent.append('<div id="stickier-fixed"></div>');
 				$stickier = $('#stickier-fixed');
-				$stickier.css('position', 'fixed').css('z-index', '9999').css('top', '0');
+				$stickier
+					.css('position', 'fixed')
+					.css('z-index', '9999')
+					.css('top', '0')
+					.css('display', $el.css('display'))
+					.css('width', $parent.width())
+					.css('height', $parent.width());
 				$el.clone().appendTo($stickier);
 			}	
 			
